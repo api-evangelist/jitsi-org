@@ -1,0 +1,458 @@
+aid: jitsi
+url: https://raw.githubusercontent.com/api-evangelist/jitsi-org/refs/heads/main/apis.yml
+name: Jitsi
+kind: contract
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+position: Consuming
+specificationVersion: '0.19'
+tags:
+- Video Conferencing
+- WebRTC
+- Real-Time Communication
+- Open Source
+- Voice
+- Video
+- SIP
+- Streaming
+- Recording
+- Self-Hosted
+description: >-
+  Jitsi is a collection of free and open-source projects for secure, simple, and
+  scalable real-time video conferencing, maintained by 8x8. The Jitsi stack
+  combines a browser-based meeting application (Jitsi Meet), a WebRTC selective
+  forwarding unit (Jitsi Videobridge), conference focus (Jicofo), SIP gateway
+  (Jigasi), and broadcasting infrastructure (Jibri), along with web, mobile,
+  desktop, and low-level SDKs for embedding meetings into other applications.
+  Jitsi is also available as a fully managed offering — Jitsi as a Service
+  (JaaS) — that exposes the same conferencing surface through a JWT-secured API
+  and the Jitsi IFrame/External API.
+apis:
+- aid: jitsi:jitsi-meet-iframe-api
+  name: Jitsi Meet IFrame (External) API
+  tags:
+  - IFrame
+  - External API
+  - Embedding
+  - Video Conferencing
+  - JavaScript
+  humanURL: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe
+  properties:
+  - url: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe
+    type: Documentation
+  - url: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe-functions
+    name: IFrame API Functions
+    type: Documentation
+  - url: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe-events
+    name: IFrame API Events
+    type: Documentation
+  - url: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe-commands
+    name: IFrame API Commands
+    type: Documentation
+  - url: https://github.com/jitsi/jitsi-meet/blob/master/modules/API/external/external_api.js
+    name: external_api.js source
+    type: SourceCode
+  description: >-
+    Browser-side JavaScript API (also called the External API) that embeds a
+    Jitsi Meet conference into any web page through an iframe. Exposes the
+    JitsiMeetExternalAPI constructor with commands (executeCommand), functions
+    (getParticipantsInfo, isVideoMuted, etc.), and an event surface
+    (videoConferenceJoined, participantJoined, audioMuteStatusChanged, raise
+    hand, breakout rooms) for controlling the meeting from the host page. The
+    same library powers the embed experience on meet.jit.si, self-hosted
+    deployments, and JaaS.
+- aid: jitsi:lib-jitsi-meet-api
+  name: lib-jitsi-meet (Low-Level JavaScript API)
+  tags:
+  - JavaScript
+  - WebRTC
+  - Low-Level
+  - Custom UI
+  humanURL: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-ljm-api
+  properties:
+  - url: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-ljm-api
+    type: Documentation
+  - url: https://github.com/jitsi/lib-jitsi-meet
+    type: SourceCode
+  - url: https://www.npmjs.com/package/lib-jitsi-meet
+    name: lib-jitsi-meet (npm)
+    type: SDK
+  description: >-
+    Low-level JavaScript library for building entirely custom video conferencing
+    experiences on top of the Jitsi infrastructure. Exposes JitsiConnection,
+    JitsiConference, JitsiTrack, and the XMPP/Colibri signaling primitives that
+    Jitsi Meet itself uses, allowing developers to bypass the default UI and
+    embed Jitsi conferencing directly inside their own application.
+- aid: jitsi:jitsi-videobridge-rest-api
+  name: Jitsi Videobridge REST API
+  tags:
+  - Videobridge
+  - SFU
+  - REST
+  - Self-Hosted
+  - Operations
+  humanURL: https://github.com/jitsi/jitsi-videobridge/blob/master/doc/rest.md
+  baseURL: http://localhost:8080
+  properties:
+  - url: https://github.com/jitsi/jitsi-videobridge/blob/master/doc/rest.md
+    name: Videobridge REST API
+    type: Documentation
+  - url: https://github.com/jitsi/jitsi-videobridge/blob/master/doc/statistics.md
+    name: Videobridge Statistics
+    type: Documentation
+  - url: https://github.com/jitsi/jitsi-videobridge
+    type: SourceCode
+  description: >-
+    Administrative HTTP API exposed by Jitsi Videobridge for operators to read
+    bridge state, list active conferences, inspect endpoints, gracefully drain
+    a bridge, and scrape Prometheus metrics. Typically bound to the private
+    network on port 8080 with paths like /colibri/conferences, /colibri/stats,
+    /colibri/debug, /colibri/shutdown, and /metrics. Not a user-facing API —
+    used by Jicofo, autoscalers, and monitoring stacks.
+- aid: jitsi:jicofo-rest-api
+  name: Jicofo REST API
+  tags:
+  - Jicofo
+  - Conference Focus
+  - REST
+  - Self-Hosted
+  - Operations
+  humanURL: https://github.com/jitsi/jicofo
+  baseURL: http://localhost:8888
+  properties:
+  - url: https://github.com/jitsi/jicofo
+    name: Jicofo
+    type: Documentation
+  - url: https://github.com/jitsi/jicofo
+    type: SourceCode
+  description: >-
+    Operations REST API exposed by Jicofo (Jitsi Conference Focus) for
+    inspecting in-progress conferences, listing the bridge selection state, and
+    triggering graceful shutdowns. Used by operators and orchestrators when
+    running self-hosted Jitsi deployments at scale.
+- aid: jitsi:jibri-rest-api
+  name: Jibri REST API
+  tags:
+  - Jibri
+  - Recording
+  - Live Streaming
+  - REST
+  - Self-Hosted
+  humanURL: https://github.com/jitsi/jibri
+  baseURL: http://localhost:2222
+  properties:
+  - url: https://github.com/jitsi/jibri
+    name: Jibri
+    type: Documentation
+  - url: https://github.com/jitsi/jibri/blob/master/doc/http_api.md
+    name: Jibri HTTP API
+    type: Documentation
+  - url: https://github.com/jitsi/jibri
+    type: SourceCode
+  description: >-
+    HTTP control API exposed by Jibri (Jitsi BRoadcasting Infrastructure) for
+    starting and stopping recording or live-streaming sessions, reporting
+    health, and surfacing the busy/idle state of a Jibri instance. Used by
+    Jicofo and orchestrators when fanning recording or RTMP streaming load
+    across a Jibri pool.
+- aid: jitsi:jaas-rest-api
+  name: JaaS (Jitsi as a Service) REST API
+  tags:
+  - JaaS
+  - 8x8
+  - Managed Service
+  - JWT
+  - REST
+  - Recording
+  - Rooms
+  humanURL: https://developer.8x8.com/jaas/docs
+  baseURL: https://api.jaas.8x8.vc
+  properties:
+  - url: https://developer.8x8.com/jaas/docs
+    name: JaaS Developer Portal
+    type: Documentation
+  - url: https://developer.8x8.com/jaas/docs/jaas-getting-started
+    name: JaaS Getting Started
+    type: GettingStarted
+  - url: https://developer.8x8.com/jaas/docs/api-keys-private-key
+    name: API Keys & Private Keys
+    type: Authentication
+  - url: https://developer.8x8.com/jaas/docs/jwt-overview
+    name: JWT Overview
+    type: Documentation
+  - url: https://jaas.8x8.vc/
+    name: JaaS Console
+    type: Console
+  description: >-
+    Managed Jitsi as a Service offering from 8x8 that fronts the open-source
+    Jitsi stack with a JWT-secured REST surface for issuing meeting tokens,
+    managing rooms, fetching recordings, controlling participants, and
+    retrieving usage. JaaS uses RS256 JSON Web Tokens signed with a
+    tenant-specific API key/private key pair generated through the JaaS
+    console at jaas.8x8.vc.
+- aid: jitsi:jaas-iframe-api
+  name: JaaS IFrame API
+  tags:
+  - JaaS
+  - 8x8
+  - IFrame
+  - Embedding
+  - JWT
+  humanURL: https://developer.8x8.com/jaas/docs/iframe-api-jaas
+  properties:
+  - url: https://developer.8x8.com/jaas/docs/iframe-api-jaas
+    name: JaaS IFrame API
+    type: Documentation
+  - url: https://developer.8x8.com/jaas/docs/jwt-overview
+    name: JWT Overview
+    type: Authentication
+  description: >-
+    JaaS-flavoured IFrame API that loads external_api.js from 8x8-vc.com (the
+    managed Jitsi domain) and authenticates each meeting with a signed JWT
+    issued for the tenant. Provides the same JitsiMeetExternalAPI commands,
+    functions, and events as the open-source IFrame API, plus JaaS-specific
+    moderator/participant claims and branding controls.
+- aid: jitsi:jitsi-meet-mobile-sdk
+  name: Jitsi Meet Mobile SDK (Android, iOS, React Native)
+  tags:
+  - Mobile
+  - Android
+  - iOS
+  - React Native
+  - SDK
+  humanURL: https://jitsi.github.io/handbook/docs/category/mobile
+  properties:
+  - url: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-android-sdk
+    name: Android SDK
+    type: SDK
+  - url: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-ios-sdk
+    name: iOS SDK
+    type: SDK
+  - url: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-react-native-sdk
+    name: React Native SDK
+    type: SDK
+  - url: https://github.com/jitsi/jitsi-meet-sdk-samples
+    name: Mobile SDK Samples
+    type: CodeExamples
+  description: >-
+    Native mobile SDKs that embed the full Jitsi Meet experience inside Android
+    and iOS applications, plus a React Native module published from the
+    jitsi-meet repository. Each SDK exposes a meeting view, a small JavaScript
+    bridge for events and commands, and supports the same JWT authentication
+    flow used by JaaS.
+- aid: jitsi:jitsi-meet-electron-sdk
+  name: Jitsi Meet Electron SDK
+  tags:
+  - Electron
+  - Desktop
+  - SDK
+  humanURL: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-electron-sdk
+  properties:
+  - url: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-electron-sdk
+    type: Documentation
+  - url: https://github.com/jitsi/jitsi-meet-electron-sdk
+    name: jitsi-meet-electron-sdk
+    type: SourceCode
+  - url: https://github.com/jitsi/jitsi-meet-electron
+    name: Jitsi Meet Electron app
+    type: SourceCode
+  description: >-
+    Electron toolkit for embedding Jitsi Meet inside a desktop application,
+    including remote control, always-on-top thumbnails, screen sharing, and
+    native window integration. Powers the official Jitsi Meet desktop app and
+    third-party desktop integrations.
+- aid: jitsi:jitsi-meet-react-sdk
+  name: Jitsi Meet React SDK
+  tags:
+  - React
+  - SDK
+  - Web
+  - Embedding
+  humanURL: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-react-sdk
+  properties:
+  - url: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-react-sdk
+    type: Documentation
+  - url: https://github.com/jitsi/jitsi-meet-react-sdk
+    name: jitsi-meet-react-sdk
+    type: SourceCode
+  - url: https://www.npmjs.com/package/@jitsi/react-sdk
+    name: '@jitsi/react-sdk (npm)'
+    type: SDK
+  description: >-
+    React component wrapper around the Jitsi Meet IFrame API that provides
+    idiomatic <JitsiMeeting /> and <JaaSMeeting /> components, type
+    definitions, hooks for events, and ref-based command dispatch — used to
+    embed Jitsi Meet or JaaS meetings inside React applications.
+common:
+- type: Portal
+  url: https://jitsi.org
+- type: Website
+  url: https://jitsi.org
+- type: Sandbox
+  name: meet.jit.si
+  url: https://meet.jit.si
+- type: Documentation
+  name: Jitsi Handbook
+  url: https://jitsi.github.io/handbook/
+- type: GettingStarted
+  url: https://jitsi.github.io/handbook/docs/intro
+- type: Documentation
+  name: Jitsi Projects Overview
+  url: https://jitsi.org/projects/
+- type: Documentation
+  name: JaaS Developer Portal
+  url: https://developer.8x8.com/jaas/docs
+- type: SignUp
+  name: JaaS Console
+  url: https://jaas.8x8.vc/
+- type: Pricing
+  name: JaaS Pricing
+  url: https://jaas.8x8.vc/#/pricing
+- type: GitHubOrganization
+  url: https://github.com/jitsi
+- type: GitHubRepository
+  name: jitsi-meet
+  url: https://github.com/jitsi/jitsi-meet
+- type: GitHubRepository
+  name: jitsi-videobridge
+  url: https://github.com/jitsi/jitsi-videobridge
+- type: GitHubRepository
+  name: lib-jitsi-meet
+  url: https://github.com/jitsi/lib-jitsi-meet
+- type: GitHubRepository
+  name: jicofo
+  url: https://github.com/jitsi/jicofo
+- type: GitHubRepository
+  name: jigasi
+  url: https://github.com/jitsi/jigasi
+- type: GitHubRepository
+  name: jibri
+  url: https://github.com/jitsi/jibri
+- type: GitHubRepository
+  name: docker-jitsi-meet
+  url: https://github.com/jitsi/docker-jitsi-meet
+- type: GitHubRepository
+  name: handbook
+  url: https://github.com/jitsi/handbook
+- type: GitHubRepository
+  name: jitsi-meet-electron
+  url: https://github.com/jitsi/jitsi-meet-electron
+- type: GitHubRepository
+  name: jitsi-meet-sdk-samples
+  url: https://github.com/jitsi/jitsi-meet-sdk-samples
+- type: SDK
+  name: lib-jitsi-meet (npm)
+  url: https://www.npmjs.com/package/lib-jitsi-meet
+- type: SDK
+  name: '@jitsi/react-sdk (npm)'
+  url: https://www.npmjs.com/package/@jitsi/react-sdk
+- type: SDK
+  name: react-native-jitsi-meet
+  url: https://github.com/jitsi/jitsi-meet
+- type: Tool
+  name: Docker Jitsi Meet
+  url: https://github.com/jitsi/docker-jitsi-meet
+- type: Tool
+  name: Jitsi Meet Desktop (Electron)
+  url: https://github.com/jitsi/jitsi-meet-electron
+- type: CodeExamples
+  name: Mobile SDK Samples
+  url: https://github.com/jitsi/jitsi-meet-sdk-samples
+- type: Support
+  name: Jitsi Community
+  url: https://community.jitsi.org/
+- type: Forum
+  url: https://community.jitsi.org/
+- type: Blog
+  url: https://jitsi.org/blog/
+- type: ReleaseNotes
+  name: Jitsi Meet Release Notes
+  url: https://github.com/jitsi/jitsi-meet-release-notes
+- type: License
+  name: Apache 2.0
+  url: https://github.com/jitsi/jitsi-meet/blob/master/LICENSE
+- type: Authentication
+  name: JaaS JWT
+  url: https://developer.8x8.com/jaas/docs/jwt-overview
+- type: TermsOfService
+  url: https://8x8.com/terms-conditions
+- type: PrivacyPolicy
+  url: https://www.8x8.com/terms-and-conditions/privacy-policy
+- type: Company
+  name: 8x8, Inc.
+  url: https://www.8x8.com
+- type: Features
+  data:
+  - name: Open-source WebRTC SFU (Jitsi Videobridge)
+    description: WebRTC-compatible selective forwarding unit able to scale to hundreds of concurrent conferences per server.
+  - name: Browser-first Jitsi Meet client
+    description: Full-featured meeting client (chat, screen share, breakout rooms, raise hand, polls, e2ee, virtual backgrounds, tile view) running entirely in the browser.
+  - name: IFrame / External API
+    description: One-line embed of a fully functioning Jitsi meeting into any web page, with a rich JS surface for commands, events, and functions.
+  - name: lib-jitsi-meet low-level API
+    description: Build a completely custom UI on top of Jitsi's signaling and media plumbing.
+  - name: Mobile SDKs
+    description: Native Android, iOS, and React Native SDKs derived from the same jitsi-meet codebase, plus a community Flutter plugin.
+  - name: Desktop client
+    description: Cross-platform Electron application and reusable Electron SDK.
+  - name: Recording and live streaming
+    description: Jibri provides server-side recording and RTMP streaming to YouTube/Twitch from any Jitsi meeting.
+  - name: SIP gateway and transcription
+    description: Jigasi bridges Jitsi meetings to SIP/PSTN endpoints and produces transcripts via pluggable speech-to-text engines.
+  - name: Self-hostable
+    description: Full stack deployable via Debian packages, Docker Compose (docker-jitsi-meet), Kubernetes, or cloud images.
+  - name: JaaS managed service
+    description: Hosted Jitsi from 8x8 with JWT-secured tenants, recording, streaming, dial-in, and a developer console at jaas.8x8.vc.
+  - name: End-to-end encryption
+    description: Insertable-stream-based E2EE for supported browsers and SDK builds.
+  - name: AI features (Skynet)
+    description: Open-source AI core services for Jitsi (transcription, summarization) shipped via the jitsi/skynet project and the opus-transcriber-proxy bridge to OpenAI.
+- type: UseCases
+  data:
+  - name: Embedded video meetings in SaaS apps
+    description: Drop Jitsi Meet into a product (HR, healthcare, education, support) via the IFrame API or React SDK.
+  - name: Privacy-focused / sovereign video calling
+    description: Self-host the full stack on infrastructure you control to meet data-residency or regulatory requirements.
+  - name: Telehealth and online education
+    description: HIPAA/FERPA-aligned deployments using self-hosted Jitsi or JaaS with recording disabled.
+  - name: Webinars and live streaming
+    description: Use Jibri for server-side recording and one-click RTMP streaming to YouTube, Twitch, or a custom ingest.
+  - name: SIP/PSTN bridging
+    description: Use Jigasi to dial regular phones into Jitsi meetings or bring SIP room systems into a Jitsi conference.
+  - name: Custom video apps
+    description: Build a bespoke conferencing UX on top of lib-jitsi-meet without operating XMPP or WebRTC primitives yourself.
+- type: Integrations
+  data:
+  - name: Matrix / Element
+    description: Element uses Jitsi as the default group-call backend in the Matrix ecosystem.
+  - name: Rocket.Chat, Mattermost, Nextcloud
+    description: First-class Jitsi integrations for team chat and collaboration platforms.
+  - name: Moodle, BigBlueButton-adjacent LMS deployments
+    description: Many education stacks embed Jitsi for synchronous classes.
+  - name: 8x8 XCaaS
+    description: JaaS is part of 8x8's experience-communications platform alongside voice, contact center, and SMS APIs.
+  - name: SIP / PSTN providers via Jigasi
+    description: Bridges to any SIP-capable provider for dial-in / dial-out.
+  - name: YouTube Live / Twitch / custom RTMP
+    description: Live-streaming targets supported by Jibri.
+  - name: Prometheus + Grafana
+    description: First-class Prometheus metrics exposed by Videobridge and Jicofo.
+  - name: Docker / Kubernetes
+    description: Official docker-jitsi-meet images and community Helm charts.
+- type: Solutions
+  data:
+  - name: Jitsi Meet (free, hosted)
+    description: meet.jit.si — anonymous, no-account video meetings on 8x8-operated infrastructure.
+  - name: Self-hosted Jitsi
+    description: Full open-source stack deployable by anyone under Apache 2.0.
+  - name: JaaS Free
+    description: Free JaaS tier for low-volume embedded usage with a generous monthly minute allowance.
+  - name: JaaS Paid / Custom
+    description: Metered pricing tiers and custom enterprise contracts for production embedded video.
+maintainers:
+- FN: Kin Lane
+  email: info@apievangelist.com
+  X: apievangelist
+  url: https://apievangelist.com
+created: '2026-05-25'
+modified: '2026-05-25'
