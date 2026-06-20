@@ -2,7 +2,7 @@ aid: jitsi
 url: https://raw.githubusercontent.com/api-evangelist/jitsi-org/refs/heads/main/apis.yml
 name: Jitsi
 kind: contract
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 position: Consuming
 specificationVersion: '0.19'
