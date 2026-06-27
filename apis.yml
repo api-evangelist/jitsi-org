@@ -76,7 +76,7 @@ apis:
     type: SourceCode
   - url: https://www.npmjs.com/package/lib-jitsi-meet
     name: lib-jitsi-meet (npm)
-    type: SDK
+    type: SDKs
   description: >-
     Low-level JavaScript library for building entirely custom video conferencing
     experiences on top of the Jitsi infrastructure. Exposes JitsiConnection,
@@ -224,13 +224,13 @@ apis:
   properties:
   - url: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-android-sdk
     name: Android SDK
-    type: SDK
+    type: SDKs
   - url: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-ios-sdk
     name: iOS SDK
-    type: SDK
+    type: SDKs
   - url: https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-react-native-sdk
     name: React Native SDK
-    type: SDK
+    type: SDKs
   - url: https://github.com/jitsi/jitsi-meet-sdk-samples
     name: Mobile SDK Samples
     type: CodeExamples
@@ -277,7 +277,7 @@ apis:
     type: SourceCode
   - url: https://www.npmjs.com/package/@jitsi/react-sdk
     name: '@jitsi/react-sdk (npm)'
-    type: SDK
+    type: SDKs
   description: >-
     React component wrapper around the Jitsi Meet IFrame API that provides
     idiomatic <JitsiMeeting /> and <JaaSMeeting /> components, type
@@ -302,7 +302,7 @@ common:
 - type: Documentation
   name: JaaS Developer Portal
   url: https://developer.8x8.com/jaas/docs
-- type: SignUp
+- type: Signup
   name: JaaS Console
   url: https://jaas.8x8.vc/
 - type: Pricing
@@ -340,19 +340,19 @@ common:
 - type: GitHubRepository
   name: jitsi-meet-sdk-samples
   url: https://github.com/jitsi/jitsi-meet-sdk-samples
-- type: SDK
+- type: SDKs
   name: lib-jitsi-meet (npm)
   url: https://www.npmjs.com/package/lib-jitsi-meet
-- type: SDK
+- type: SDKs
   name: '@jitsi/react-sdk (npm)'
   url: https://www.npmjs.com/package/@jitsi/react-sdk
-- type: SDK
+- type: SDKs
   name: react-native-jitsi-meet
   url: https://github.com/jitsi/jitsi-meet
-- type: Tool
+- type: Tools
   name: Docker Jitsi Meet
   url: https://github.com/jitsi/docker-jitsi-meet
-- type: Tool
+- type: Tools
   name: Jitsi Meet Desktop (Electron)
   url: https://github.com/jitsi/jitsi-meet-electron
 - type: CodeExamples
@@ -361,7 +361,7 @@ common:
 - type: Support
   name: Jitsi Community
   url: https://community.jitsi.org/
-- type: Forum
+- type: Forums
   url: https://community.jitsi.org/
 - type: Blog
   url: https://jitsi.org/blog/
