@@ -1,0 +1,33 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: jitsi.org
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  3 03:42:28 2026 GMT
+  hsts: false
+- host: developer.8x8.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 27 06:24:19 2026 GMT
+  hsts: false
+- host: api.jaas.8x8.vc
+  https: false
+domains:
+- domain: jitsi.org
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
+- domain: 8x8.com
+  dnssec: false
+  caa:
+  - 0 issue "amazon.com"
+  - 0 issue "digicert.com"
+  - 0 issue "letsencrypt.org"
+  - 0 iodef "mailto:dns-management@8x8.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
