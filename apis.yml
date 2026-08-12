@@ -295,6 +295,14 @@ apis:
     definitions, hooks for events, and ref-based command dispatch — used to
     embed Jitsi Meet or JaaS meetings inside React applications.
 common:
+- type: IssueTracker
+  url: https://github.com/jitsi/jitsi-meet/issues
+- type: Releases
+  url: https://github.com/jitsi/jitsi-meet/releases
+- type: SecurityPolicy
+  url: https://github.com/jitsi/jitsi-meet/blob/master/SECURITY.md
+- type: ContributionGuide
+  url: https://github.com/jitsi/jitsi-meet/blob/master/CONTRIBUTING.md
 - type: DomainSecurity
   url: security/jitsi-org-domain-security.yml
 - type: Portal
