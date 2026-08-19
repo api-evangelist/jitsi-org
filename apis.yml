@@ -16,7 +16,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jitsi-org.png
 access: 3rd-Party
 position: Consuming
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 tags:
 - Video Conferencing
 - WebRTC
