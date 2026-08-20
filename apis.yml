@@ -21,6 +21,17 @@ tags:
 - Video Conferencing
 - WebRTC
 - Real-Time Communication
+- Open-Source
+- Voice
+- Video
+- SIP
+- Streaming
+- Recording
+- Self-Hosted
+tags_raw:
+- Video Conferencing
+- WebRTC
+- Real-Time Communication
 - Open Source
 - Voice
 - Video
@@ -42,6 +53,12 @@ apis:
 - aid: jitsi:jitsi-meet-iframe-api
   name: Jitsi Meet IFrame (External) API
   tags:
+  - Iframe
+  - External API
+  - Embedding
+  - Video Conferencing
+  - JavaScript
+  tags_raw:
   - IFrame
   - External API
   - Embedding
@@ -101,6 +118,11 @@ apis:
   - SFU
   - REST
   - Self-Hosted
+  tags_raw:
+  - Videobridge
+  - SFU
+  - REST
+  - Self-Hosted
   - Operations
   humanURL: https://github.com/jitsi/jitsi-videobridge/blob/master/doc/rest.md
   baseURL: http://localhost:8080
@@ -123,6 +145,11 @@ apis:
 - aid: jitsi:jicofo-rest-api
   name: Jicofo REST API
   tags:
+  - Jicofo
+  - Conference Focus
+  - REST
+  - Self-Hosted
+  tags_raw:
   - Jicofo
   - Conference Focus
   - REST
@@ -204,6 +231,12 @@ apis:
 - aid: jitsi:jaas-iframe-api
   name: JaaS IFrame API
   tags:
+  - JaaS
+  - 8x8
+  - Iframe
+  - Embedding
+  - JWT
+  tags_raw:
   - JaaS
   - 8x8
   - IFrame
