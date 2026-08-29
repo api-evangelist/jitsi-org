@@ -2,6 +2,19 @@ aid: jitsi-org
 url: https://raw.githubusercontent.com/api-evangelist/jitsi-org/refs/heads/main/apis.yml
 name: Jitsi
 kind: contract
+deliveryModel:
+  model: saas
+  license: Apache 2.0
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - license
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
