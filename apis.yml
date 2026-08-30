@@ -66,7 +66,7 @@ apis:
 - aid: jitsi:jitsi-meet-iframe-api
   name: Jitsi Meet IFrame (External) API
   tags:
-  - Iframe
+  - IFrame
   - External API
   - Embedding
   - Video Conferencing
@@ -246,7 +246,7 @@ apis:
   tags:
   - JaaS
   - 8x8
-  - Iframe
+  - IFrame
   - Embedding
   - JWT
   tags_raw:
