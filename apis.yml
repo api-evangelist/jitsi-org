@@ -68,7 +68,7 @@ apis:
   tags:
   - Iframe
   - External API
-  - Embedding
+  - Embeddings
   - Video Conferencing
   - JavaScript
   tags_raw:
@@ -247,7 +247,7 @@ apis:
   - JaaS
   - 8x8
   - Iframe
-  - Embedding
+  - Embeddings
   - JWT
   tags_raw:
   - JaaS
@@ -321,6 +321,11 @@ apis:
 - aid: jitsi:jitsi-meet-react-sdk
   name: Jitsi Meet React SDK
   tags:
+  - React
+  - SDK
+  - Web
+  - Embeddings
+  tags_raw:
   - React
   - SDK
   - Web
