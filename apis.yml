@@ -30,11 +30,15 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jitsi-org.
 access: 3rd-Party
 position: Consuming
 specificationVersion: '0.23'
+x-docs-platform: docusaurus
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-10-03
+x-docs-hosting: github-pages
 tags:
 - Video Conferencing
 - WebRTC
 - Real-Time Communication
-- Open-Source
+- Open Source
 - Voice
 - Video
 - SIP
@@ -52,6 +56,7 @@ tags_raw:
 - Streaming
 - Recording
 - Self-Hosted
+- Open-Source
 description: >-
   Jitsi is a collection of free and open-source projects for secure, simple, and
   scalable real-time video conferencing, maintained by 8x8. The Jitsi stack
