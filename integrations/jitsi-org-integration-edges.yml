@@ -1,0 +1,24 @@
+generated: '2026-10-19'
+method: searched
+checked:
+- zendesk/integrations/zendesk-integration-edges.yml
+source:
+- zendesk/integrations/zendesk-integration-edges.yml
+edges:
+- partner_name: Zendesk (own)
+  partner: zendesk
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.zendesk.com/marketplace/apps/support/868438/jitsi-meeting-for-support/
+  mirror_of: zendesk/integrations/zendesk-integration-edges.yml
+  apps:
+  - Jitsi Meeting for Support
+  listing_count: 1
+  detected: '2026-10-19'
+  detected_by: mirror-platform-listings.py
+  category: Video
