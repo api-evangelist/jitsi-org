@@ -4,26 +4,10 @@ checked:
 - zendesk/integrations/zendesk-integration-edges.yml
 - https://flathub.org/api/v2/appstream
 - https://flathub.org/api/v2/appstream/<app-id>
+- artifact-hub/integrations/artifact-hub-integration-edges.yml
 source:
 - zendesk/integrations/zendesk-integration-edges.yml
 edges:
-- partner_name: Zendesk (own)
-  partner: zendesk
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://www.zendesk.com/marketplace/apps/support/868438/jitsi-meeting-for-support/
-  mirror_of: zendesk/integrations/zendesk-integration-edges.yml
-  apps:
-  - Jitsi Meeting for Support
-  listing_count: 1
-  detected: '2026-10-19'
-  detected_by: mirror-platform-listings.py
-  category: Video
 - partner_name: Flathub
   partner: null
   partner_match: null
@@ -61,3 +45,39 @@ edges:
   - Flathub verified
   detected_by: sweep-flathub-linux-app-publishers.py
   first_seen: '2026-10-22'
+- partner_name: Zendesk (own)
+  partner: zendesk
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.zendesk.com/marketplace/apps/support/868438/jitsi-meeting-for-support/
+  mirror_of: zendesk/integrations/zendesk-integration-edges.yml
+  apps:
+  - Jitsi Meeting for Support
+  listing_count: 1
+  detected: '2026-10-19'
+  detected_by: mirror-platform-listings.py
+  category: Video
+- partner_name: Artifact Hub (artifact-hub)
+  partner: artifact-hub
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: artifact-hub
+  evidence: https://artifacthub.io/packages/search?repo=jitsi-meet
+  mirror_of: artifact-hub/integrations/artifact-hub-integration-edges.yml
+  apps:
+  - jitsi-meet
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: Artifact Hub listing (Helm chart)
+  badges:
+  - 'Verified publisher (Artifact Hub verified publisher: repository ownership proven)'
