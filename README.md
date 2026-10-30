@@ -1,4 +1,4 @@
-# Jitsi (jitsi)
+# Jitsi
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,138 +66,98 @@
 
 Jitsi is a collection of free and open-source projects for secure, simple, and scalable real-time video conferencing, maintained by 8x8. The Jitsi stack combines a browser-based meeting application (Jitsi Meet), a WebRTC selective forwarding unit (Jitsi Videobridge), conference focus (Jicofo), SIP gateway (Jigasi), and broadcasting infrastructure (Jibri), along with web, mobile, desktop, and low-level SDKs for embedding meetings into other applications. Jitsi is also available as a fully managed offering — Jitsi as a Service (JaaS) — that exposes the same conferencing surface through a JWT-secured API and the Jitsi IFrame/External API.
 
-**URL:** [Visit APIs.json](https://raw.githubusercontent.com/api-evangelist/jitsi-org/refs/heads/main/apis.yml)
+**Areas:** Video Conferencing · WebRTC · Real-Time Communication · Open Source · Voice · Video · SIP · Streaming · Recording · Self-Hosted
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=opensource-api-evangelist&utm_content=repo)
+## Jitsi on APIs.io
 
-## Tags
+Everything profiled for Jitsi is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/jitsi-org/](https://apis.io/providers/jitsi-org/)** — or go straight to one of the APIs or properties below.
 
-Video Conferencing, WebRTC, Real-Time Communication, Open Source, Voice, Video, SIP, Streaming, Recording, Self-Hosted
+### APIs (10)
 
-## Timestamps
+- [Jitsi Meet IFrame (External) API](https://apis.io/apis/jitsi-org/jitsi-meet-iframe-api/) — Browser-side JavaScript API (also called the External API) that embeds a Jitsi Meet conference into any web page through an iframe. Exposes the…
+- [lib-jitsi-meet (Low-Level JavaScript API)](https://apis.io/apis/jitsi-org/lib-jitsi-meet-api/) — Low-level JavaScript library for building entirely custom video conferencing experiences on top of the Jitsi infrastructure. Exposes JitsiConnection,…
+- [Jitsi Videobridge REST API](https://apis.io/apis/jitsi-org/jitsi-videobridge-rest-api/) — Administrative HTTP API exposed by Jitsi Videobridge for operators to read bridge state, list active conferences, inspect endpoints, gracefully drain a…
+- [Jicofo REST API](https://apis.io/apis/jitsi-org/jicofo-rest-api/) — Operations REST API exposed by Jicofo (Jitsi Conference Focus) for inspecting in-progress conferences, listing the bridge selection state, and triggering…
+- [Jibri REST API](https://apis.io/apis/jitsi-org/jibri-rest-api/) — HTTP control API exposed by Jibri (Jitsi BRoadcasting Infrastructure) for starting and stopping recording or live-streaming sessions, reporting health, and…
+- [JaaS (Jitsi as a Service) REST API](https://apis.io/apis/jitsi-org/jaas-rest-api/) — Managed Jitsi as a Service offering from 8x8 that fronts the open-source Jitsi stack with a JWT-secured REST surface for issuing meeting tokens, managing…
+- [JaaS IFrame API](https://apis.io/apis/jitsi-org/jaas-iframe-api/) — JaaS-flavoured IFrame API that loads external_api.js from 8x8-vc.com (the managed Jitsi domain) and authenticates each meeting with a signed JWT issued for…
+- [Jitsi Meet Mobile SDK (Android, iOS, React Native)](https://apis.io/apis/jitsi-org/jitsi-meet-mobile-sdk/) — Native mobile SDKs that embed the full Jitsi Meet experience inside Android and iOS applications, plus a React Native module published from the jitsi-meet…
+- [Jitsi Meet Electron SDK](https://apis.io/apis/jitsi-org/jitsi-meet-electron-sdk/) — Electron toolkit for embedding Jitsi Meet inside a desktop application, including remote control, always-on-top thumbnails, screen sharing, and native…
+- [Jitsi Meet React SDK](https://apis.io/apis/jitsi-org/jitsi-meet-react-sdk/) — React component wrapper around the Jitsi Meet IFrame API that provides idiomatic <JitsiMeeting /> and <JaaSMeeting /> components, type definitions, hooks…
 
-- **Created:** 2026-05-25
-- **Modified:** 2026-05-25
+### Published properties
 
-## Core Projects
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-| Project | Repo | What it is |
-|---|---|---|
-| Jitsi Meet | [jitsi/jitsi-meet](https://github.com/jitsi/jitsi-meet) | TypeScript meeting client (web + mobile + desktop bridge) |
-| Jitsi Videobridge | [jitsi/jitsi-videobridge](https://github.com/jitsi/jitsi-videobridge) | WebRTC SFU written in Kotlin |
-| lib-jitsi-meet | [jitsi/lib-jitsi-meet](https://github.com/jitsi/lib-jitsi-meet) | Low-level JS API for custom UIs |
-| Jicofo | [jitsi/jicofo](https://github.com/jitsi/jicofo) | Conference focus / signaling controller |
-| Jigasi | [jitsi/jigasi](https://github.com/jitsi/jigasi) | SIP gateway + transcription |
-| Jibri | [jitsi/jibri](https://github.com/jitsi/jibri) | Recording + RTMP live streaming |
-| docker-jitsi-meet | [jitsi/docker-jitsi-meet](https://github.com/jitsi/docker-jitsi-meet) | Full stack on Docker Compose |
-| Jitsi Meet Electron | [jitsi/jitsi-meet-electron](https://github.com/jitsi/jitsi-meet-electron) | Desktop app |
-| Handbook | [jitsi/handbook](https://github.com/jitsi/handbook) | Official developer + operator docs |
-| Skynet | [jitsi/skynet](https://github.com/jitsi/skynet) | AI core services for Jitsi |
+#### Security (1)
 
-## APIs
+Authentication, trust centre, and vulnerability disclosure.
 
-### Jitsi Meet IFrame (External) API
-Browser-side JavaScript API that embeds a Jitsi Meet conference into any web page through an iframe. Exposes the `JitsiMeetExternalAPI` constructor with commands, functions, and a rich event surface (`videoConferenceJoined`, `participantJoined`, `audioMuteStatusChanged`, breakout rooms, raise hand). Powers meet.jit.si, self-hosted deployments, and JaaS.
+- [Jitsi Org Domain Security](https://apis.io/security/jitsi-org/jitsi-org-domain-security/)
 
-**Human URL:** [https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe)
+## Where to find this API
 
-- [Documentation](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe)
-- [IFrame API Functions](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe-functions)
-- [IFrame API Events](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe-events)
-- [IFrame API Commands](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-iframe-commands)
-- [Source — external_api.js](https://github.com/jitsi/jitsi-meet/blob/master/modules/API/external/external_api.js)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-### lib-jitsi-meet (Low-Level JavaScript API)
-Low-level JavaScript library for building entirely custom video conferencing experiences on top of Jitsi infrastructure. Exposes `JitsiConnection`, `JitsiConference`, `JitsiTrack`, and the XMPP/Colibri signaling primitives that Jitsi Meet itself uses.
-
-**Human URL:** [https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-ljm-api](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-ljm-api)
-
-- [Documentation](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-ljm-api)
-- [Source — lib-jitsi-meet](https://github.com/jitsi/lib-jitsi-meet)
-- [npm — lib-jitsi-meet](https://www.npmjs.com/package/lib-jitsi-meet)
-
-### Jitsi Videobridge REST API
-Administrative HTTP API exposed by Jitsi Videobridge for operators to read bridge state, list active conferences, inspect endpoints, gracefully drain a bridge, and scrape Prometheus metrics. Typically bound to the private network on port 8080.
-
-**Base URL:** `http://localhost:8080`
-
-- [Documentation — Videobridge REST](https://github.com/jitsi/jitsi-videobridge/blob/master/doc/rest.md)
-- [Documentation — Statistics](https://github.com/jitsi/jitsi-videobridge/blob/master/doc/statistics.md)
-- [Source — jitsi-videobridge](https://github.com/jitsi/jitsi-videobridge)
-
-### Jicofo REST API
-Operations REST API exposed by Jicofo (Jitsi Conference Focus) for inspecting in-progress conferences, listing bridge selection state, and triggering graceful shutdowns. Used by operators and orchestrators when running self-hosted Jitsi at scale.
-
-**Base URL:** `http://localhost:8888`
-
-- [Source — jicofo](https://github.com/jitsi/jicofo)
-
-### Jibri REST API
-HTTP control API exposed by Jibri (Jitsi BRoadcasting Infrastructure) for starting and stopping recording or live-streaming sessions, reporting health, and surfacing busy/idle state. Used by Jicofo and orchestrators when fanning recording or RTMP load across a Jibri pool.
-
-**Base URL:** `http://localhost:2222`
-
-- [Documentation — Jibri HTTP API](https://github.com/jitsi/jibri/blob/master/doc/http_api.md)
-- [Source — jibri](https://github.com/jitsi/jibri)
-
-### JaaS (Jitsi as a Service) REST API
-Managed Jitsi as a Service offering from 8x8 that fronts the open-source Jitsi stack with a JWT-secured REST surface for issuing meeting tokens, managing rooms, fetching recordings, controlling participants, and retrieving usage. JaaS uses RS256 JSON Web Tokens signed with a tenant-specific API key/private key pair.
-
-**Base URL:** `https://api.jaas.8x8.vc`
-
-- [JaaS Developer Portal](https://developer.8x8.com/jaas/docs)
-- [Getting Started](https://developer.8x8.com/jaas/docs/jaas-getting-started)
-- [API Keys & Private Keys](https://developer.8x8.com/jaas/docs/api-keys-private-key)
-- [JWT Overview](https://developer.8x8.com/jaas/docs/jwt-overview)
-- [JaaS Console](https://jaas.8x8.vc/)
-
-### JaaS IFrame API
-JaaS-flavoured IFrame API that loads `external_api.js` from the managed 8x8-vc.com domain and authenticates each meeting with a signed JWT issued for the tenant. Same `JitsiMeetExternalAPI` surface as the open-source IFrame API plus JaaS-specific moderator/participant claims and branding controls.
-
-- [Documentation — JaaS IFrame API](https://developer.8x8.com/jaas/docs/iframe-api-jaas)
-- [Authentication — JWT Overview](https://developer.8x8.com/jaas/docs/jwt-overview)
-
-### Jitsi Meet Mobile SDK (Android, iOS, React Native)
-Native mobile SDKs that embed the full Jitsi Meet experience inside Android and iOS applications, plus a React Native module published from the jitsi-meet repository. Each SDK exposes a meeting view, a small JS bridge for events and commands, and supports JWT authentication.
-
-- [Android SDK](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-android-sdk)
-- [iOS SDK](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-ios-sdk)
-- [React Native SDK](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-react-native-sdk)
-- [Mobile SDK Samples](https://github.com/jitsi/jitsi-meet-sdk-samples)
-
-### Jitsi Meet Electron SDK
-Electron toolkit for embedding Jitsi Meet inside a desktop application, including remote control, always-on-top thumbnails, screen sharing, and native window integration. Powers the official Jitsi Meet desktop app.
-
-- [Documentation](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-electron-sdk)
-- [Source — jitsi-meet-electron-sdk](https://github.com/jitsi/jitsi-meet-electron-sdk)
-- [Source — jitsi-meet-electron app](https://github.com/jitsi/jitsi-meet-electron)
-
-### Jitsi Meet React SDK
-React component wrapper around the Jitsi Meet IFrame API providing idiomatic `<JitsiMeeting />` and `<JaaSMeeting />` components, type definitions, hooks for events, and ref-based command dispatch.
-
-- [Documentation](https://jitsi.github.io/handbook/docs/dev-guide/dev-guide-react-sdk)
-- [Source — jitsi-meet-react-sdk](https://github.com/jitsi/jitsi-meet-react-sdk)
-- [npm — @jitsi/react-sdk](https://www.npmjs.com/package/@jitsi/react-sdk)
-
-## Common
-
-- [Portal](https://jitsi.org)
 - [Website](https://jitsi.org)
-- [Sandbox — meet.jit.si](https://meet.jit.si)
-- [Documentation — Jitsi Handbook](https://jitsi.github.io/handbook/)
-- [Getting Started](https://jitsi.github.io/handbook/docs/intro)
-- [Projects Overview](https://jitsi.org/projects/)
-- [JaaS Developer Portal](https://developer.8x8.com/jaas/docs)
-- [Sign Up — JaaS Console](https://jaas.8x8.vc/)
-- [Pricing — JaaS](https://jaas.8x8.vc/#/pricing)
-- [GitHub Organization](https://github.com/jitsi)
-- [Community / Support](https://community.jitsi.org/)
+- [Documentation](https://jitsi.github.io/handbook/)
+- [Getting started](https://jitsi.github.io/handbook/docs/intro)
+- [Pricing](https://jaas.8x8.vc/#/pricing)
+- [Support](https://community.jitsi.org/)
 - [Blog](https://jitsi.org/blog/)
-- [Release Notes](https://github.com/jitsi/jitsi-meet-release-notes)
-- [License — Apache 2.0](https://github.com/jitsi/jitsi-meet/blob/master/LICENSE)
-- [Authentication — JaaS JWT](https://developer.8x8.com/jaas/docs/jwt-overview)
-- [Company — 8x8, Inc.](https://www.8x8.com)
+- [Terms of service](https://8x8.com/terms-conditions)
+- [Privacy policy](https://www.8x8.com/terms-and-conditions/privacy-policy)
+- [GitHub](https://github.com/jitsi)
 
-## Maintainers
+## API Evangelist rating
 
-- **Kin Lane** — info@apievangelist.com — [apievangelist.com](https://apievangelist.com)
+**Kin Score 33.3** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 6.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 73.8 |
+| Access clarity | 34.2 |
+
+**Agent readiness 3.8** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/jitsi-org/](https://apis.io/providers/jitsi-org/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Jitsi: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/jitsi-org/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
